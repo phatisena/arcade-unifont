@@ -79,6 +79,12 @@ namespace unifont {
         return ImgOutput
     }
 
+    /**
+     * setup single font from single letter
+     * or longest letter and single image
+     * and set detail color image manage
+     * and store to table id
+     */
     //%blockid=unifont_setcharecter
     //%block="set |table id $gid and set letter $glyph to img $imgi=screen_image_picker ||and |the letter can move? $notmove and stay on or under the letter? $onthechar and substract width $inchar erase col $bcol spacebar col $scol base col $mcol guard col $ncol"
     //%bcol.shadow=colorindexpicker
@@ -180,6 +186,12 @@ namespace unifont {
         }
     }
 
+    /**
+     * setup font array from single letter
+     * and sprite sheet image 
+     * or set main detail color manage
+     * and store in the table id
+     */
     //%blockid=unifont_setcharfromimgsheet
     //%block="set |table id $tid and set img sheet $PngSheet=screen_image_picker with letters $GroupChar ||and |staying letters $StayChar letters on the letters $CharOnChar and Char Substact $CharSubW width $twid height $thei erase col $bcl space col $scl base col $mcl guard col $ncl"
     //%bcl.shadow=colorindexpicker
@@ -194,6 +206,12 @@ namespace unifont {
         }
     }
 
+    /**
+     * setup font arrays from long letters
+     * and sprite sheet image 
+     * or set main detail color manage
+     * and store to table id
+     */
     //%blockid=unifont_setchararrfromimgsheet
     //%block="set |table id $tid and set img sheet $PngSheet=screen_image_picker with array letters $GroupChar ||and |staying letters of array $StayChar letters on the letters in array $CharOnChar and Char array Substact $CharSubW width $twid height $thei erase col $bcl space col $scl base col $mcl guard col $ncl"
     //%bcl.shadow=colorindexpicker
@@ -220,6 +238,10 @@ namespace unifont {
         return _ustr
     }
 
+    /**
+     * get All text data 
+     * in number amount
+     */
     //%blockid=unifont_numofglyphs
     //%block="number of glyphs ||in table id $tid"
     //%group="datainfo"
@@ -227,6 +249,10 @@ namespace unifont {
         return ligs[tid].length
     }
 
+    /**
+     * get font image array 
+     * from table id
+     */
     //%blockid=unifont_arrofgypimg
     //%block="array of glyph images ||in table id $tid"
     //%group="datainfo"
@@ -234,6 +260,10 @@ namespace unifont {
         return ligages[tid]
     }
 
+    /**
+     * get text array data
+     * from table id
+     */
     //%blockid=unifont_arrofglyphs
     //%block="array of glyphs ||in table id $tid"
     //%group="datainfo"
@@ -241,6 +271,11 @@ namespace unifont {
         return ligs[tid]
     }
 
+    /**
+     * render text image from input
+     * and render to the font from table id
+     * and get result in single image
+     */
     //%blockid=unifont_setimgfromtext
     //%block="create the image of |text $input in page width $iwidt from table id $tid ||and |fill col $icol and got alignment $alm and get debugalm $debugalm"
     //%alm.min=-1 alm.max=1 alm.defl=0
@@ -459,6 +494,11 @@ namespace unifont {
         return output
     }
 
+    /**
+     * render text animation frame
+     * and render to the font from table id
+     * and get result to the array image
+     */
     //%blockid=unifont_setimgframefromtext
     //%block="create the image frame of |text $input in page width $iwidt from table id $tid ||and |fill col $icol and got alignment $alm and get debugalm $debugalm"
     //%alm.min=-1 alm.max=1 alm.defl=0
@@ -677,6 +717,10 @@ namespace unifont {
         return outputarr
     }
 
+    /**
+     * render text
+     * to the unique dialog frame image
+     */
     //%blockid=unifont_stamptexttoframe
     //%block="StampStrImgToTheFrame $Fimg=screen_image_picker Text $Txt Text width $Wval TableId $arrid || Solid col $ucol Alignment $ualm"
     //%ualm.min=-1 ualm.max=1 ualm.defl=0
@@ -691,6 +735,10 @@ namespace unifont {
         return UfImg
     }
 
+    /**
+     * render text animation frame
+     * to the unique dialog frame image
+     */
     //%blockid=unifont_stamptextarrtoframe
     //%block="StampStrAnimToTheFrame $Fimg=screen_image_picker Text input $Txt In text width $Wval At table id $arrid ||With text color $ucol And alignment $ualm "
     //%ualm.min=-1 ualm.max=1 ualm.defl=0
@@ -711,6 +759,9 @@ namespace unifont {
         return imgArr
     }
 
+    /**
+     * set the letterspace value
+     */
     //%blockid=unifont_setletterspacing
     //%block="set letter spacing to $input"
     //%group="modify"
@@ -718,6 +769,9 @@ namespace unifont {
         letterspace = input
     }
 
+    /**
+     * change the letterspace value
+     */
     //%blockid=unifont_changeletterspacing
     //%block="change letter spacing by $input"
     //%group="modify"
@@ -727,6 +781,9 @@ namespace unifont {
 
     export enum tempfont { MainFont, ArcadeFont }
 
+    /**
+     * setup font template to the table id
+     */
     //%blockid=unifont_presetfont
     //%block="SetupPresetFont $tempf ||with table id $tid"
     //%group="create"
