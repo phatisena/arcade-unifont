@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.57/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.0","target":"arcade","targetVersion":"1.12.57"}
-// total=1243438 new=5.85% cached=88.50% other=5.66%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.57/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.0.0","target":"arcade","targetVersion":"1.12.57","repo":"phatisena/arcade-unifont"}
+// total=1243444 new=5.85% cached=88.50% other=5.66%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -429,7 +429,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P26772(s) {
+function _main___P776556(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -831,13 +831,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P26772.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P26772.continuations = [  ]
+_main___P776556.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P776556.continuations = [  ]
 
-function _main___P26772_mk(s) {
+function _main___P776556_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P26772, depth: s.depth + 1,
+        parent: s, fn: _main___P776556, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -42328,5 +42328,5 @@ const sprites_BaseSpriteSayRenderer__C2260_VT = mkVTable({
 
 const breakpoints = setupDebugger(1, [])
 
-return _main___P26772
+return _main___P776556
 })
